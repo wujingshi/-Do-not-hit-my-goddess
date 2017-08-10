@@ -1,0 +1,76 @@
+
+/*通栏设置*/
+body {
+    background:linear-gradient(to right,white,skyblue);
+}
+/*顶部设置*/
+.top {
+    height: 220px;
+    width: 500px;
+    margin:10px auto;
+    border: 1px solid #000;
+    text-align: center;
+}
+.top h1 {
+    color: red;
+    text-shadow: 0 0 10px yellow;
+}
+
+/*地鼠样式*/
+.diShu {
+    height: 500px;
+    width: 520px;
+    margin: 0px auto;
+    border: 1px solid red;
+}
+.diShu ul {
+    list-style: none;
+}
+.diShu ul li{
+    float: left;
+    width: 120px;
+    height: 60px;
+    background-color: peru;
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-right: 33px;
+    margin-bottom: 85px;
+}
+.diShu ul li:first-child,
+.diShu ul li:nth-child(2),
+.diShu ul li:nth-child(3) {
+    margin-top: 50px;
+}
+.diShu li div {
+    width: 70px;
+    height: 100px;
+    /*background-color: pink;*/
+    /*background: url("../img/xhjy.png") no-repeat center/cover;*/
+    margin: 0 auto;
+    position: relative;
+    opacity: 0;
+}
+.diShu li div.goodMou {
+    width: 100px;
+    /*background-color: pink;*/
+    background: url("../img/tianshi.gif") no-repeat center/cover;
+}
+.diShu li div.badMou {
+    /*background-color: green;*/
+    background: url("../img/xhjy.png") no-repeat center/cover;
+}
+
+@keyframes dng {
+    50% {
+        margin-top: -50px;
+        opacity: 1;
+    }
+    100% {
+        margin-top: -20px;
+        opacity: 0;
+    }
+}
+
+.diShu div.active {
+    animation: dng 2s ease-in-out infinite;
+}
